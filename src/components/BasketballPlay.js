@@ -33,7 +33,7 @@ export default function BasketballPlay() {
     setResult("");
     const start = Date.now();
     try {
-      const resp = await fetch("/basketball/play", {
+      const resp = await fetch(`${process.env.REACT_APP_API_URL}/basketball/play`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
